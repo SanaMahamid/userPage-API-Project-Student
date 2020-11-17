@@ -1,6 +1,7 @@
 
 class Renderer {
     renderMainUser(mainUser){
+        $('.user-container').empty()
         const source = $('#user-template').html()
         const template = Handlebars.compile(source) 
         const newHtml = template(mainUser)
@@ -8,6 +9,7 @@ class Renderer {
     }
 
     renderQuote(quote){
+        $('.quote-container').empty()
         const source = $('#quote-template').html()
         const template = Handlebars.compile(source) 
         const newHtml = template(quote)
@@ -15,6 +17,7 @@ class Renderer {
     }
 
     renderPokemon(pokemon){
+        $('.pokemon-container').empty()
         const source = $('#pokemon-template').html()
         const template = Handlebars.compile(source) 
         const newHtml = template(pokemon)
@@ -22,6 +25,7 @@ class Renderer {
     }
 
     renderAboutMe(aboutMe){
+        $('.meat-container').empty()
         const source = $('#meat-template').html()
         const template = Handlebars.compile(source) 
         const newHtml = template(aboutMe)
@@ -29,6 +33,7 @@ class Renderer {
     }
 
     renderFriends(friends){
+        $('.friends-container').empty()
         const source = $('#friends-template').html()
         const template = Handlebars.compile(source) 
         const newHtml = template(friends)
