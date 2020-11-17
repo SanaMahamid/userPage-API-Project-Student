@@ -25,10 +25,53 @@
             </div>	
         </div>	
         <div class="buttons">	
-            <button>Load User Data</button>	
-            <button>Display User</button>	
+            <button id="load">Load User Data</button>	
+            <button id="display">Display User</button>	
         </div>	
     </div>
+
+    <script id="user-template" type="text/x-handlebars-template">
+        <div class="user-info">
+            <img src="{{picture}}" alt="" id="profile-pic">
+            <div id="info">
+                <div id="name">{{firstName}} {{lastName}}</div>
+                <div id="address">{{city}}, {{state}}</div>
+            </div>
+        </div>
+    </script>
+
+    <script id="quote-template" type="text/x-handlebars-template">
+        <span>Favorite quote:</span>
+        <p>{{text}}</p>
+        <p>-Kanye</p>
+    </script>
+
+    <script id="pokemon-template" type="text/x-handlebars-template">
+        <img src="{{image}}" alt="" id="pokemon-image">
+        <span id="pokemon-text">Favorite Pokemon: {{name}}</span>
+    </script>
+
+    <script id="meat-template" type="text/x-handlebars-template">
+        <div class="meat-text">{{text}}</div>
+    </script>
+
+    <script id="friends-template" type="text/x-handlebars-template">
+        <ul>
+            {{#each friends}}
+              <li>
+                  <div>{{firstName}} {{lastName}}</div>
+              </li>
+            {{/each}}
+        </ul>
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="APIManager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
